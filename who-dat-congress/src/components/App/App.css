@@ -67,6 +67,16 @@ li {
   .App-header {
     justify-content: center;
   }
+
+  .committees {
+    margin-top: -10vh;
+    margin-left: -20vw;
+  }
+
+
+  /* .profile {
+    margin-top: -10vh;
+  } */
 }
 
 @media screen and (orientation: landscape) and (max-width: 800px) {
@@ -92,7 +102,8 @@ li {
   }
 
   .committees {
-    margin-top: -14vh;
+    margin-top: -16vh;
+    margin-left: -8vw;
   }
 
 }

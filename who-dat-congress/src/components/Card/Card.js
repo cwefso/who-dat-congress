@@ -60,7 +60,7 @@ const Card = ({ id, chamber }) => {
 							<main>
 								<section className="container">
 									<section className="profile">
-										<h2>{chamber}</h2>
+										<h2 style={{ opacity: "0", marginTop: "4vh"}}>{chamber}</h2>
 										{/* <img src={imageURL} alt="profile-img"></img> */}
 										<section className="committees">
 											<ul>
@@ -99,7 +99,7 @@ const Card = ({ id, chamber }) => {
 						<main>
 							<section className="container">
 								<section className="profile">
-									<h2>{chamber}</h2>
+									<h2 style={{ opacity: "0", marginTop: "4vh"}}>{chamber}</h2>
 									{/* <img src={imageURL} alt="profile-img"></img> */}
 									<section className="committees">
 										<ul>
@@ -108,7 +108,7 @@ const Card = ({ id, chamber }) => {
 											</li>
 											<li>Party: {member.roles[0].party}</li>
 											<li>
-												State: ({member.roles[0].state}
+												State: {member.roles[0].state}
 											</li>
 											<li>Leadership Role: {leadership}</li>
 											<li>
