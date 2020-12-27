@@ -1,10 +1,18 @@
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.buttons {
+  width: 60vw;
+  display: flex;
+  justify-content: space-around;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -18,9 +26,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+  overflow: scroll;
+  height: 100vh;
+  width: 100vw;
 }
 
 .App-link {
@@ -35,9 +46,9 @@
     transform: rotate(360deg);
   }
 }
-
+/* 
 @media screen and (min-width: 700px) {
   .App-header {
     height: 100vh;
   }
-}
+} */

@@ -45,6 +45,7 @@ const Card = ({ id, chamber }) => {
 
 		return (
 			<section className="App-header">
+        <main>
 				<section className="container">
 					<section className="profile">
 						<h2>{chamber}</h2>
@@ -63,15 +64,16 @@ const Card = ({ id, chamber }) => {
 							{committees}
 						</section>
 					)}
-				</section>
+        </section>
 				<button onClick={toggleActive}>Flip</button>
 				<Link
 					to={"/"}
 					className="back-button"
-					style={{ textDecoration: "none" }}
+					style={{ color: 'inherit', textDecoration: 'inherit' }}
 				>
 					Back
 				</Link>
+        </main>
 			</section>
 		);
 	} else {

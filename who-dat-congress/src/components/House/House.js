@@ -42,7 +42,7 @@ const House = () => {
   } else {
 
     return (
-      <section className="App-header">
+      <section>
       <Card id={selectedMember.id} chamber={"House"}/>
 		</section>
 	);
