@@ -43,11 +43,7 @@ const House = () => {
 
     return (
       <section className="App-header">
-			<h2>House</h2>
-      <Card id={selectedMember.id} />
-			<Link to={"/"} className="back-button" style={{ textDecoration: "none" }}>
-				Back
-			</Link>
+      <Card id={selectedMember.id} chamber={"House"}/>
 		</section>
 	);
 }

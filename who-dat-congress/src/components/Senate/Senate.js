@@ -41,11 +41,7 @@ const Senate = () => {
 
     return (
       <section className="App-header">
-			<h2>Senate</h2>
-      <Card id={selectedMember.id} />
-			<Link to={"/"} className="back-button" style={{ textDecoration: "none" }}>
-				Back
-			</Link>
+      <Card id={selectedMember.id} chamber={"Senate"}/>
 		</section>
 	);
 }

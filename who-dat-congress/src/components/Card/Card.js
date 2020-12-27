@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Card.css";
 
-const Card = ({ id }) => {
+const Card = ({ id, chamber }) => {
 	const [member, setMember] = useState({});
-  const [imageURL, setImageUrl] = useState("");
-  const [active, setActive] = useState(false);
+	const [imageURL, setImageUrl] = useState("");
+	const [active, setActive] = useState(false);
 
 	useEffect(() => {
 		loadMember();
@@ -23,15 +23,15 @@ const Card = ({ id }) => {
 			.then((response) => response.json())
 			.then((result) => setMember(result.results[0]))
 			.catch((error) => console.log("error", error));
-  };
-  
-  const toggleActive = () => {
-    if(active === true){
-      setActive(false)
-    } else {
-      setActive(true)
-    } 
-  }
+	};
+
+	const toggleActive = () => {
+		if (active === true) {
+			setActive(false);
+		} else {
+			setActive(true);
+		}
+	};
 
 	let committees = <h3>Loading</h3>;
 
@@ -47,21 +47,31 @@ const Card = ({ id }) => {
 			<section className="App-header">
 				<section className="container">
 					<section className="profile">
+						<h2>{chamber}</h2>
 						<img src={imageURL} alt="profile-img"></img>
-          {active && 
-						<h2>
-							{member.first_name} {member.last_name}, {member.roles[0].state}, {member.roles[0].district}
-							{member.roles[0].party}
-						</h2>}
+						{active && (
+							<h2>
+								{member.first_name} {member.last_name}, {member.roles[0].state},{" "}
+								{member.roles[0].district}
+								{member.roles[0].party}
+							</h2>
+						)}
 					</section>
-          {active &&
-					<section className="committees">
-						<h3>Committees</h3>
-						{committees}
-					</section>
-          }
+					{active && (
+						<section className="committees">
+							<h3>Committees</h3>
+							{committees}
+						</section>
+					)}
 				</section>
-        <button onClick={toggleActive}>Flip</button>
+				<button onClick={toggleActive}>Flip</button>
+				<Link
+					to={"/"}
+					className="back-button"
+					style={{ textDecoration: "none" }}
+				>
+					Back
+				</Link>
 			</section>
 		);
 	} else {

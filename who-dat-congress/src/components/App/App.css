@@ -15,7 +15,6 @@
 
 .App-header {
   background-color: #282c34;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,5 +33,11 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .App-header {
+    height: 100vh;
   }
 }
