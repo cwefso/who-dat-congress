@@ -16,7 +16,7 @@ const main = (
 						<Link
 							to={"/house"}
 							className="house-button"
-              style={{ color: 'blue', textDecoration: 'inherit', fontSize: '1.4em' }}
+              style={{ color: 'lightblue', textDecoration: 'inherit', fontSize: '1.4em' }}
 						>
 							House
 						</Link>
