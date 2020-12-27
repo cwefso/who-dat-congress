@@ -29,7 +29,8 @@
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 100vh;
   width: 100vw;
 }
@@ -46,9 +47,10 @@
     transform: rotate(360deg);
   }
 }
-/* 
-@media screen and (min-width: 700px) {
-  .App-header {
-    height: 100vh;
+
+@media screen and (max-width: 700px) {
+  img {
+    height: 80%;
+    width: 80%;
   }
-} */
+}
