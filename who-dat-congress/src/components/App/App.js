@@ -16,14 +16,14 @@ const main = (
 						<Link
 							to={"/house"}
 							className="house-button"
-              style={{ color: 'inherit', textDecoration: 'inherit' }}
+              style={{ color: 'blue', textDecoration: 'inherit', fontSize: '1.4em' }}
 						>
 							House
 						</Link>
 						<Link
 							to={"/senate"}
 							className="senate-button"
-              style={{ color: 'inherit', textDecoration: 'inherit' }}
+              style={{ color: 'red', textDecoration: 'inherit', fontSize: '1.4em' }}
 						>
 					    Senate
 						</Link>

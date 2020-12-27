@@ -43,39 +43,75 @@ const Card = ({ id, chamber }) => {
 			</section>
 		));
 
-		return (
-			<section className="App-header">
-        <main>
-				<section className="container">
-					<section className="profile">
-						<h2>{chamber}</h2>
-						<img src={imageURL} alt="profile-img"></img>
-						{active && (
-							<h2>
-								{member.first_name} {member.last_name}, {member.roles[0].state},{" "}
-								{member.roles[0].district}
-								{member.roles[0].party}
-							</h2>
-						)}
-					</section>
-					{active && (
-						<section className="committees">
-							<h3>Committees</h3>
-							{committees}
+		if (chamber == "House") {
+			return (
+				<section className="App-header">
+					<main>
+						<section className="container">
+							<section className="profile">
+								<h2>{chamber}</h2>
+								<img src={imageURL} alt="profile-img"></img>
+								{active && (
+									<h2>
+										{member.first_name} {member.last_name},{" "}
+										{member.roles[0].state}, District:{" "}
+										{member.roles[0].district}
+										{member.roles[0].party}
+									</h2>
+								)}
+							</section>
+							{active && (
+								<section className="committees">
+									<h3>Committees</h3>
+									{committees}
+								</section>
+							)}
 						</section>
-					)}
-        </section>
-				<button onClick={toggleActive}>Flip</button>
-				<Link
-					to={"/"}
-					className="back-button"
-					style={{ color: 'inherit', textDecoration: 'inherit' }}
-				>
-					Back
-				</Link>
-        </main>
-			</section>
-		);
+						<button onClick={toggleActive}>Flip</button>
+						<Link
+							to={"/"}
+							className="back-button"
+							style={{ color: "inherit", textDecoration: "inherit" }}
+						>
+							Back
+						</Link>
+					</main>
+				</section>
+			);
+		} else if (chamber === "Senate") {
+			return (
+				<section className="App-header">
+					<main>
+						<section className="container">
+							<section className="profile">
+								<h2>{chamber}</h2>
+								<img src={imageURL} alt="profile-img"></img>
+								{active && (
+									<h2>
+										{member.first_name} {member.last_name},{" "}
+										{member.roles[0].state},{member.roles[0].party}
+									</h2>
+								)}
+							</section>
+							{active && (
+								<section className="committees">
+									<h3>Committees</h3>
+									{committees}
+								</section>
+							)}
+						</section>
+						<button onClick={toggleActive}>Flip</button>
+						<Link
+							to={"/"}
+							className="back-button"
+							style={{ color: "inherit", textDecoration: "inherit" }}
+						>
+							Back
+						</Link>
+					</main>
+				</section>
+			);
+		}
 	} else {
 		console.log("Loading");
 		return <section>Loading...</section>;
