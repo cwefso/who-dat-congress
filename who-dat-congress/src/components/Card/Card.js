@@ -68,6 +68,9 @@ const Card = ({ id, chamber }) => {
 									{committees}
                       </ul>
                     </li>
+                    <li>
+                      <a href= {`https://www.opensecrets.org/search?q=${member.first_name}+${member.last_name}&type=indiv`} style={{color: 'white'}}>Open Secrets Search</a>
+                    </li>
 									</ul>
 								</section>
 							)}
