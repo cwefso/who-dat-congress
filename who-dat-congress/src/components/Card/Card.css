@@ -10,13 +10,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3vh;
 }
 
 button {
-  width: 60vw;
-  height: 10vh;
+  width: 20vw;
+  height: 5vh;
   font-size: x-large;
+  margin-top: 25px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  justify-content: space-evenly;
+  margin-top: 25px;
 }
 
 @media screen and (max-width: 700px) {
@@ -27,5 +35,9 @@ button {
 
   .committees {
     width: 80vw;
+  }
+
+  .links {
+    margin-bottom: 35px;
   }
 }

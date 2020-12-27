@@ -68,13 +68,23 @@ const Card = ({ id, chamber }) => {
 							)}
 						</section>
 						<button onClick={toggleActive}>Flip</button>
+            <section className="links">
 						<Link
 							to={"/"}
 							className="back-button"
 							style={{ color: "inherit", textDecoration: "inherit" }}
-						>
-							Back
+              >
+							Home
 						</Link>
+            <Link
+							to={`/${chamber}`}
+							className="back-button"
+              style={{ color: "inherit", textDecoration: "inherit" }}
+              onClick={() => {window.location.reload(false)}}
+              >
+							Next
+						</Link>
+            </section>
 					</main>
 				</section>
 			);
@@ -101,13 +111,23 @@ const Card = ({ id, chamber }) => {
 							)}
 						</section>
 						<button onClick={toggleActive}>Flip</button>
+            <section className="links">
 						<Link
 							to={"/"}
 							className="back-button"
 							style={{ color: "inherit", textDecoration: "inherit" }}
-						>
-							Back
+              >
+							Home
 						</Link>
+            <Link
+							to={`/${chamber}`}
+							className="back-button"
+              style={{ color: "inherit", textDecoration: "inherit" }}
+              onClick={() => {window.location.reload(false)}}
+              >
+							Next
+						</Link>
+            </section>
 					</main>
 				</section>
 			);

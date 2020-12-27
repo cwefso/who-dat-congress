@@ -14,14 +14,14 @@ const main = (
 			</p>
       <section className="buttons">
 						<Link
-							to={"/house"}
+							to={"/House"}
 							className="house-button"
               style={{ color: 'lightblue', textDecoration: 'inherit', fontSize: '1.4em' }}
 						>
 							House
 						</Link>
 						<Link
-							to={"/senate"}
+							to={"/Senate"}
 							className="senate-button"
               style={{ color: 'red', textDecoration: 'inherit', fontSize: '1.4em' }}
 						>
