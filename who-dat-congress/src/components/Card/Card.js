@@ -43,7 +43,7 @@ const Card = ({ id, chamber }) => {
 		return (
 			<section className="App-header">
 				<Flippy flipOnClick={true}>
-					<FrontSide>
+					<FrontSide style={{ backgroundColor: '#282c34'}}>
 						<main>
 							<section className="container">
 								<section className="profile">
@@ -54,7 +54,9 @@ const Card = ({ id, chamber }) => {
 						</main>
 					</FrontSide>
 					{chamber === "House" && (
-					<BackSide>
+					<BackSide
+					style={{ backgroundColor: '#282c34'}}
+					>
 							<main>
 								<section className="container">
 									<section className="profile">
@@ -91,7 +93,9 @@ const Card = ({ id, chamber }) => {
 						</BackSide>
 						)}
 						{chamber === "Senate" && (
-						<BackSide>
+						<BackSide
+						style={{ backgroundColor: '#282c34'}}
+						>
 						<main>
 							<section className="container">
 								<section className="profile">

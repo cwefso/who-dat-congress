@@ -15,14 +15,7 @@
   justify-content: space-around;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background: white;
   color: black;
   display: flex;
   flex-direction: column;
@@ -35,21 +28,24 @@
   width: 100vw;
 }
 
-.App-link {
-  color: #1138e7;
-}
+
 
 .flippy-container {
   width: 60vw; 
   height: 90vh;
   margin-top: 5vh;
-  background-color: #282c34;
+  background-color: white;
   color: white;
 } 
 
 @media screen and (max-width: 700px) {
-  img {
-    width: 75vw;
+  .logo, img {
+    width: 73vw;
+    height: 50vh;
+  }
+
+  .logo {
+    width: 80vw;
     height: 50vh;
   }
 

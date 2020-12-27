@@ -7,7 +7,7 @@ import logo from './logo.png';
 const main = (
 	<div className="App">
 		<header className="App-header">
-		<img src={logo} alt="logo" />
+		<img src={logo} className="logo" alt="logo" />
       <section className="buttons">
 						<Link
 							to={"/House"}
