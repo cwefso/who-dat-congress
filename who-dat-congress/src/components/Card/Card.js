@@ -34,11 +34,18 @@ const Card = ({ id, chamber }) => {
 	};
 
 	let committees = <h3>Loading</h3>;
+	let leadership;
+
+	if(member.role !== null){
+		leadership = <section>{member.roles[0].leadership_role}</section>;
+	} else {
+		leadership = <section>None</section>;
+	}
 
 	if (member.roles) {
 		console.log("member", member.roles[0].committees[0]);
 		committees = member.roles[0].committees.map((committee) => (
-				<li>{committee.name}</li>
+			<li>{committee.name}</li>
 		));
 
 		if (chamber === "House") {
@@ -61,16 +68,19 @@ const Card = ({ id, chamber }) => {
 											State: ({member.roles[0].state}-{member.roles[0].district}
 											)
 										</li>
-                    <li>
-
-                    Committees:
-                      <ul>
-									{committees}
-                      </ul>
-                    </li>
-                    <li>
-                      <a href= {`https://www.opensecrets.org/search?q=${member.first_name}+${member.last_name}&type=indiv`} style={{color: 'white'}}>Open Secrets Search</a>
-                    </li>
+										<li>Leadership Role: {leadership}</li>
+										<li>
+											Committees:
+											<ul>{committees}</ul>
+										</li>
+										<li>
+											<a
+												href={`https://www.opensecrets.org/search?q=${member.first_name}+${member.last_name}&type=indiv`}
+												style={{ color: "white" }}
+											>
+												Open Secrets Search
+											</a>
+										</li>
 									</ul>
 								</section>
 							)}
@@ -114,19 +124,20 @@ const Card = ({ id, chamber }) => {
 											Name: Sen. {member.first_name} {member.last_name}
 										</li>
 										<li>Party: {member.roles[0].party}</li>
+										<li>State: {member.roles[0].state}</li>
+										<li>Leadership Role: {leadership}</li>
 										<li>
-											State: {member.roles[0].state}
+											Committees:
+											<ul>{committees}</ul>
 										</li>
-                    <li>
-
-                    Committees:
-                      <ul>
-									{committees}
-                      </ul>
-                    </li>
-                    <li>
-                      <a href= {`https://www.opensecrets.org/search?q=${member.first_name}+${member.last_name}&type=indiv`} style={{color: 'white'}}>Open Secrets Search</a>
-                    </li>
+										<li>
+											<a
+												href={`https://www.opensecrets.org/search?q=${member.first_name}+${member.last_name}&type=indiv`}
+												style={{ color: "white" }}
+											>
+												Open Secrets Search
+											</a>
+										</li>
 									</ul>
 								</section>
 							)}
