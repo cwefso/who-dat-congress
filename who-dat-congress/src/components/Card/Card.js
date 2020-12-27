@@ -38,12 +38,10 @@ const Card = ({ id, chamber }) => {
 	if (member.roles) {
 		console.log("member", member.roles[0].committees[0]);
 		committees = member.roles[0].committees.map((committee) => (
-			<section className="committee">
-				<h3>{committee.name}</h3>
-			</section>
+				<li>{committee.name}</li>
 		));
 
-		if (chamber == "House") {
+		if (chamber === "House") {
 			return (
 				<section className="App-header">
 					<main>
@@ -51,40 +49,49 @@ const Card = ({ id, chamber }) => {
 							<section className="profile">
 								<h2>{chamber}</h2>
 								<img src={imageURL} alt="profile-img"></img>
-								{active && (
-									<h2>
-										{member.first_name} {member.last_name},{" "}
-										{member.roles[0].state}, District:{" "}
-										{member.roles[0].district}
-										{member.roles[0].party}
-									</h2>
-								)}
 							</section>
 							{active && (
 								<section className="committees">
-									<h3>Committees</h3>
+									<ul>
+										<li>
+											Name: Rep. {member.first_name} {member.last_name}
+										</li>
+										<li>Party: {member.roles[0].party}</li>
+										<li>
+											State: ({member.roles[0].state}-{member.roles[0].district}
+											)
+										</li>
+                    <li>
+
+                    Committees:
+                      <ul>
 									{committees}
+                      </ul>
+                    </li>
+									</ul>
 								</section>
 							)}
 						</section>
 						<button onClick={toggleActive}>Flip</button>
-            <section className="links">
-						<Link
-							to={"/"}
-							className="back-button"
-							style={{ color: "inherit", textDecoration: "inherit" }}
-              >
-							Home
-						</Link>
-            <Link
-							to={`/${chamber}`}
-							className="back-button"
-              style={{ color: "inherit", textDecoration: "inherit" }}
-              onClick={() => {window.location.reload(false)}}
-              >
-							Next
-						</Link>
-            </section>
+						<section className="links">
+							<Link
+								to={"/"}
+								className="back-button"
+								style={{ color: "inherit", textDecoration: "inherit" }}
+							>
+								Home
+							</Link>
+							<Link
+								to={`/${chamber}`}
+								className="back-button"
+								style={{ color: "inherit", textDecoration: "inherit" }}
+								onClick={() => {
+									window.location.reload(false);
+								}}
+							>
+								Next
+							</Link>
+						</section>
 					</main>
 				</section>
 			);
@@ -96,38 +103,48 @@ const Card = ({ id, chamber }) => {
 							<section className="profile">
 								<h2>{chamber}</h2>
 								<img src={imageURL} alt="profile-img"></img>
-								{active && (
-									<h2>
-										{member.first_name} {member.last_name},{" "}
-										{member.roles[0].state},{member.roles[0].party}
-									</h2>
-								)}
 							</section>
 							{active && (
 								<section className="committees">
-									<h3>Committees</h3>
+									<ul>
+										<li>
+											Name: Sen. {member.first_name} {member.last_name}
+										</li>
+										<li>Party: {member.roles[0].party}</li>
+										<li>
+											State: {member.roles[0].state}
+										</li>
+                    <li>
+
+                    Committees:
+                      <ul>
 									{committees}
+                      </ul>
+                    </li>
+									</ul>
 								</section>
 							)}
 						</section>
 						<button onClick={toggleActive}>Flip</button>
-            <section className="links">
-						<Link
-							to={"/"}
-							className="back-button"
-							style={{ color: "inherit", textDecoration: "inherit" }}
-              >
-							Home
-						</Link>
-            <Link
-							to={`/${chamber}`}
-							className="back-button"
-              style={{ color: "inherit", textDecoration: "inherit" }}
-              onClick={() => {window.location.reload(false)}}
-              >
-							Next
-						</Link>
-            </section>
+						<section className="links">
+							<Link
+								to={"/"}
+								className="back-button"
+								style={{ color: "inherit", textDecoration: "inherit" }}
+							>
+								Home
+							</Link>
+							<Link
+								to={`/${chamber}`}
+								className="back-button"
+								style={{ color: "inherit", textDecoration: "inherit" }}
+								onClick={() => {
+									window.location.reload(false);
+								}}
+							>
+								Next
+							</Link>
+						</section>
 					</main>
 				</section>
 			);
