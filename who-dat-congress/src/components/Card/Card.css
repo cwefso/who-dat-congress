@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.profile {
+  margin-bottom: 5vh;
+}
+
 button {
   width: 20vw;
   height: 5vh;
@@ -23,8 +27,15 @@ button {
   display: flex;
   flex-direction: row;
   width: 80vw;
-  justify-content: space-evenly;
-  margin-top: 25px;
+  justify-content: space-between;
+}
+
+img {
+  margin-bottom: 5vh;
+}
+
+.committees {
+  width: 60vw;
 }
 
 @media screen and (max-width: 700px) {
@@ -39,5 +50,7 @@ button {
 
   .links {
     margin-bottom: 35px;
+    justify-content: space-evenly;
+    margin-top: 5vh;
   }
 }

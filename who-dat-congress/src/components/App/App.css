@@ -39,17 +39,22 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.flippy-container {
+  width: 60vw; 
+  height: 90vh;
+  margin-top: 5vh;
+  background-color: #282c34;
+  color: white;
+} 
 
 @media screen and (max-width: 700px) {
   img {
     width: 80%;
   }
+
+  .flippy-container {
+    width: 95vw; 
+    height: 80vh;
+    margin-top: 5vh;
+  } 
 }
