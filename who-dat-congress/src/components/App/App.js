@@ -2,16 +2,12 @@ import "./App.css";
 import { Switch, Route, Link } from "react-router-dom";
 import House from "../House/House";
 import Senate from "../Senate/Senate";
+import logo from './logo.png';
 
 const main = (
 	<div className="App">
 		<header className="App-header">
-			<h1>
-				Who Dat?
-			</h1>
-			<p>
-				Congress Edition
-			</p>
+		<img src={logo} alt="logo" />
       <section className="buttons">
 						<Link
 							to={"/House"}

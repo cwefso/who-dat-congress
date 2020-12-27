@@ -49,7 +49,8 @@
 
 @media screen and (max-width: 700px) {
   img {
-    width: 80%;
+    width: 75vw;
+    height: 50vh;
   }
 
   .flippy-container {
