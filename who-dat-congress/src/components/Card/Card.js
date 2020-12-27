@@ -36,14 +36,13 @@ const Card = ({ id, chamber }) => {
 	let committees = <h3>Loading</h3>;
 	let leadership;
 
-	if(member.role !== null){
+	if (member.role) {
 		leadership = <section>{member.roles[0].leadership_role}</section>;
 	} else {
 		leadership = <section>None</section>;
 	}
 
 	if (member.roles) {
-		console.log("member", member.roles[0].committees[0]);
 		committees = member.roles[0].committees.map((committee) => (
 			<li>{committee.name}</li>
 		));
