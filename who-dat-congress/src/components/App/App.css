@@ -28,7 +28,10 @@
   width: 100vw;
 }
 
-
+li {
+  margin-top: 1vh;
+  display: flex;
+}
 
 .flippy-container {
   width: 60vw; 
@@ -38,7 +41,13 @@
   color: white;
 } 
 
-@media screen and (max-width: 700px) {
+@media screen and (orientation: portrait) and (max-width: 700px) {
+  body {
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
   .logo, img {
     width: 73vw;
     height: 50vh;
@@ -58,4 +67,32 @@
   .App-header {
     justify-content: center;
   }
+}
+
+@media screen and (orientation: landscape) and (max-width: 800px) {
+  img {
+    width: 28vw;
+  }
+
+  /* .flippy-container {
+    overflow-y: scroll;
+  }  */
+
+  .profile {
+    margin-top: -10vh;
+  }
+
+  li {
+    margin-top: 2vh;
+    display: flex;
+  }
+
+  h2 {
+    margin-left: 44vw;
+  }
+
+  .committees {
+    margin-top: -14vh;
+  }
+
 }
